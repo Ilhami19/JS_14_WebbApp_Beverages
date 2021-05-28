@@ -25,10 +25,18 @@ btn.addEventListener("click",actOnClick);
 
 // Event-Dispatcher
 function actOnClick() {
-    controller();
+    if (isInputValid()) {
+        controller();
+    } else {
+       ausgabe("Input nicht korrekt.");
+    }   
 }
 
 // Check auf korrekte Eingaben ...
+function isInputValid() {
+  return false;  
+}
+
 
 // Modul Eingabe | Test:
 //ausgabe(getInput());
