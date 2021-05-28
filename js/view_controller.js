@@ -3,7 +3,7 @@
 
 /* Der Plan
     Einlesen Daten von Webseite :: check!
-	Check Daten :: 
+	Check Daten :: check!
     Btn. Trigger :: check!
     Business-Logic (Alter --> Getränk) :: 
     Bild austauschen :: check!
@@ -35,9 +35,17 @@ function actOnClick() {
 
 // Check auf korrekte Eingaben ...
 function isInputValid() {
+    
     let inputStr = field.value;
-    ausgabe(inputStr);
-    return false;  
+    let patt = /^[0-9]{1,3}$/g; 
+    let cond = patt.test(inputStr);
+
+    if (!cond) {
+       field.value = "";
+       updateImg(data.default.bev);
+    }
+
+    return cond;  
 }
 
 
