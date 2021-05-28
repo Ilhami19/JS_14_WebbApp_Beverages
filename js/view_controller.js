@@ -2,9 +2,9 @@
 /* View- Controller */
 
 /* Der Plan
-    Einlesen Daten von Webseite :: 
+    Einlesen Daten von Webseite :: check!
 	Check Daten :: 
-    Btn. Trigger :: 
+    Btn. Trigger :: check!
     Business-Logic (Alter --> Getränk) :: 
     Bild austauschen :: check!
 */
@@ -12,25 +12,26 @@
 // Modul Ablaufsteuerung | Test:
 //controller()
 function controller() {
-    ausgabe(updateImg(checkAge(4)));
+    ausgabe(updateImg(checkAge(getInput())));
 }
 
 
 // Trigger - Btn 
 let btn = document.getElementById("trigBtn");
 btn.addEventListener("click",actOnClick);
+
 // Trigger - Input
 
 
 // Event-Dispatcher
 function actOnClick() {
-   ausgabe("btn geklickt.") 
+    controller();
 }
 
 // Check auf korrekte Eingaben ...
 
 // Modul Eingabe | Test:
-ausgabe(getInput())
+//ausgabe(getInput());
 function getInput() {
     let inputField = document.getElementsByName("eingabe")[0];
     let age = parseInt(inputField.value);
