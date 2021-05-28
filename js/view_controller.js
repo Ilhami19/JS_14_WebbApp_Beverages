@@ -17,10 +17,15 @@ function controller() {
 
 
 // Trigger - Btn 
+let btn = document.getElementById("trigBtn");
+btn.addEventListener("click",actOnClick);
 // Trigger - Input
 
 
 // Event-Dispatcher
+function actOnClick() {
+   ausgabe("btn geklickt.") 
+}
 
 // Check auf korrekte Eingaben ...
 
