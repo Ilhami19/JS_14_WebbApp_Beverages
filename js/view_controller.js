@@ -21,7 +21,8 @@ let btn = document.getElementById("trigBtn");
 btn.addEventListener("click",actOnClick);
 
 // Trigger - Input
-
+let field = document.getElementsByName("eingabe")[0];
+field.addEventListener("input",isInputValid);
 
 // Event-Dispatcher
 function actOnClick() {
@@ -34,7 +35,9 @@ function actOnClick() {
 
 // Check auf korrekte Eingaben ...
 function isInputValid() {
-  return false;  
+    let inputStr = field.value;
+    ausgabe(inputStr);
+    return false;  
 }
 
 
